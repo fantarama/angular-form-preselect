@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+
+    <script type="text/javascript" src="../release/angular-form-preselect.js"></script>
+    <script type="text/javascript" defer>
+        angular.module("angular-form-preselect").
+                controller("DemoController", function ($log) {
+                    this.demoOptions = ["1st", "2nd", "3th"];
+                    this.onChange = function(value) {
+                        $log.info("Value changed to '%s'", value);
+                    };
+                });
+    </script>
+</head>
+<body ng-app="angular-form-preselect">
+
+<div ng-controller="DemoController as demo">
+
+    <ng-form-preselect name="test" options="demo.demoOptions" other="'other...'" placeholder="'insert your hext'" on-change="demo.onChange(value)"></ng-form-preselect>
+
+</div>
+
+</body>
+</html>
