@@ -18,13 +18,24 @@
 
 <div ng-controller="DemoController as demo">
 
-    <ng-form-preselect
+    <h2><a href="https://github.com/fantarama/angular-form-preselect"><code>angular-form-preselect</code></a> directive demo</h2>
+
+    <p>Select the <strong>'other'</strong> value to switch the field to an <strong>input text</strong>; press <code>ESC</code> to swtich back to select field.</p>
+
+    <p>
+    Field: <ng-form-preselect
             name="test"
             options="demo.demoOptions"
             other="'other...'"
             placeholder="'insert your text'"
             on-change="demo.onChange(value)"
             required=""></ng-form-preselect>
+    </p>
+
+    <footer>
+        <p>&nbsp;</p>
+        <p>Author: <a href="mailto:andrea.fantappie@gmail.com">andrea.fantappie@gmail.com</a> </p>
+    </footer>
 
 </div>
 
