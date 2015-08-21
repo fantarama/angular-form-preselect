@@ -1,3 +1,3 @@
-<select name="{{ctrl.name}}" ng-model="ctrl.model" ng-options="item for item in ctrl.selectOptions" ng-change="ctrl.selected()" ng-if="ctrl.cfg.select"></select>
-<input type="text" name="{{ctrl.name}}" ng-model="ctrl.model" ng-if="ctrl.cfg.input" ng-keyup="ctrl.key($event)" placeholder="{{ctrl.placeholder}}" ng-change="ctrl.changed()"/>
+<select name="{{ctrl.name}}" ng-model="ctrl.model" ng-options="item for item in ctrl.selectOptions" ng-change="ctrl.selected()" ng-if="ctrl.cfg.select" ng-required="ctrl.required"></select>
+<input type="text" name="{{ctrl.name}}" ng-model="ctrl.model" ng-if="ctrl.cfg.input" ng-keyup="ctrl.key($event)" placeholder="{{ctrl.placeholder}}" ng-change="ctrl.changed()" ng-required="ctrl.required"/>
 
